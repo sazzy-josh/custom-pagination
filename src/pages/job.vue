@@ -1,16 +1,18 @@
 <template>
   <div class="container mx-auto">
-    <h2 class="font-semibold my-5 text-2xl">Jobs</h2>
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-between mb-10"
-    >
-      <JobCard
-        v-for="(job, idx) in visibleItems"
-        :key="idx"
-        :jobDetails="job"
-      />
+    <div class="px-4">
+      <h2 class="font-semibold my-5 text-2xl">Jobs</h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-between mb-10"
+      >
+        <JobCard
+          v-for="(job, idx) in visibleItems"
+          :key="idx"
+          :jobDetails="job"
+        />
+      </div>
+      <Pagination :meta="meta" @refresh="paginate" class="mb-10" />
     </div>
-    <Pagination :meta="meta" @refresh="paginate" class="mb-10" />
   </div>
 </template>
 
