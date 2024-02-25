@@ -11,18 +11,15 @@
     ]"
     @click="handleClick()"
   >
-    <SpinnerIcon v-if="loading" />
-    <p v-else>{{ text }}</p>
+    <p>{{ text }}</p>
   </component>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import SpinnerIcon from "~/components/icons/Spinner/index.vue";
 
 export default Vue.extend({
   name: "Button",
-  components: { SpinnerIcon },
   props: {
     text: {
       type: String,
