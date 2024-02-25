@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto">
-    <div class="px-4">
+    <div class="px-4" ref="jobs">
       <h2 class="font-semibold my-5 text-2xl">Jobs</h2>
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-between mb-10"
@@ -57,12 +57,15 @@ export default Vue.extend({
       switch (param) {
         case "next":
           this.currentPage += 1;
+          (this.$refs.jobs as any).scrollIntoView({ behavior: "smooth" });
           break;
         case "prev":
           this.currentPage -= 1;
+          (this.$refs.jobs as any).scrollIntoView({ behavior: "smooth" });
           break;
         default:
           this.currentPage = param;
+          (this.$refs.jobs as any).scrollIntoView({ behavior: "smooth" });
           break;
       }
     },
