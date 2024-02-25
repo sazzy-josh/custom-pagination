@@ -69,15 +69,4 @@ export default Vue.extend({
 });
 </script>
 
-<style scoped>
-.contact-img {
-  width: 470px;
-  height: 470px;
-  object-fit: contain;
-
-  @media screen and (max-width: 1024px) {
-    width: 400px;
-    height: 400px;
-  }
-}
-</style>
+<style scoped></style>
