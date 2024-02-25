@@ -26,7 +26,6 @@ export default Vue.extend({
     JobCard,
     Pagination,
   },
-  layout: "noLayout",
   data() {
     return {
       jobs: JOBSDATA,
