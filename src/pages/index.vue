@@ -11,7 +11,7 @@
           :jobDetails="job"
         />
       </div>
-      <Pagination :meta="meta" @refresh="paginate" class="mb-10" />
+      <Pagination :meta="meta" @refresh="paginate" class="mb-[200px]" />
     </div>
   </div>
 </template>
