@@ -11,7 +11,7 @@
           :jobDetails="job"
         />
       </div>
-      <Pagination :meta="meta" @refresh="paginate" class="mb-10" />
+      <Pagination :meta="meta" @refresh="paginate" class="mb-[200px]" />
     </div>
   </div>
 </template>
@@ -57,15 +57,15 @@ export default Vue.extend({
       switch (param) {
         case "next":
           this.currentPage += 1;
-          (this.$refs.jobs as any).scrollIntoView({ behavior: "smooth" });
+          // (this.$refs.jobs as any).scrollIntoView({ behavior: "smooth" });
           break;
         case "prev":
           this.currentPage -= 1;
-          (this.$refs.jobs as any).scrollIntoView({ behavior: "smooth" });
+          // (this.$refs.jobs as any).scrollIntoView({ behavior: "smooth" });
           break;
         default:
           this.currentPage = param;
-          (this.$refs.jobs as any).scrollIntoView({ behavior: "smooth" });
+          // (this.$refs.jobs as any).scrollIntoView({ behavior: "smooth" });
           break;
       }
     },
